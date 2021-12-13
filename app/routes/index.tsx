@@ -100,16 +100,20 @@ function Section({
 }) {
   return (
     <section id={id} className="pt-24">
-      <h4 className="uppercase font-bold tracking-wider text-gray-400">
+      <p className="uppercase font-bold tracking-wider text-gray-500">
         {label}
-      </h4>
+      </p>
       <h3
         className={`text-transparent bg-gradient-to-r bg-clip-text ${getGradientFromCode(
           startsWith
         )} text-4xl font-bold relative`}
       >
         {startsWith}xx
-        <Link to={`/#${id}`} className="absolute -left-10 top-2">
+        <Link
+          title={`Link to the list of ${id} status codes`}
+          to={`/#${id}`}
+          className="absolute -left-10 top-2"
+        >
           <LinkIcon />
         </Link>
       </h3>
