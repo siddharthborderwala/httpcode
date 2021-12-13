@@ -113,7 +113,7 @@ function GitHubLogo() {
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <header className="flex items-center justify-between py-2 container mx-auto px-4 max-w-full md:max-w-3xl lg:max-w-4xl xl:max-w-7xl">
+      <header className="flex items-center justify-between py-4 container mx-auto px-4 max-w-full md:max-w-3xl lg:max-w-4xl xl:max-w-7xl">
         <Link
           to="/"
           title="Http Code"
@@ -145,7 +145,10 @@ function Layout({ children }: { children: React.ReactNode }) {
           </a>
         </nav>
       </header>
-      <main className="py-4 container mx-auto px-4 max-w-full md:max-w-3xl lg:max-w-4xl xl:max-w-7xl">
+      <main
+        style={{ minHeight: 'calc(100vh - 10.25rem)' }}
+        className="py-4 container mx-auto px-4 max-w-full md:max-w-3xl lg:max-w-4xl xl:max-w-7xl"
+      >
         {children}
       </main>
       <footer className="py-8 container mx-auto px-4 max-w-full md:max-w-3xl lg:max-w-4xl xl:max-w-7xl">
