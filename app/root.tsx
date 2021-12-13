@@ -1,4 +1,5 @@
 import {
+  Link,
   Links,
   LiveReload,
   Meta,
@@ -9,12 +10,16 @@ import {
 } from 'remix'
 import type { LinksFunction } from 'remix'
 
-import styles from './styles/tailwind.css'
+import tailwindStyles from './styles/tailwind.css'
+import globalStyles from './styles/global.css'
 import Layout from './components/layout'
 
 // https://remix.run/api/app#links
 export let links: LinksFunction = () => {
-  return [{ rel: 'stylesheet', href: styles }]
+  return [
+    { rel: 'stylesheet', href: tailwindStyles },
+    { rel: 'stylesheet', href: globalStyles },
+  ]
 }
 
 // https://remix.run/api/conventions#default-export
@@ -55,20 +60,11 @@ export function CatchBoundary() {
 
   let message
   switch (caught.status) {
-    case 401:
-      message = (
-        <p>
-          Oops! Looks like you tried to visit a page that you do not have access
-          to.
-        </p>
-      )
-      break
     case 404:
       message = (
-        <p>Oops! Looks like you tried to visit a page that does not exist.</p>
+        <p>Oops! Looks like you tried to visit a page that does not exist ☹️</p>
       )
       break
-
     default:
       throw new Error(caught.data || caught.statusText)
   }
@@ -76,10 +72,22 @@ export function CatchBoundary() {
   return (
     <Document title={`${caught.status} ${caught.statusText}`}>
       <Layout>
-        <h1>
-          {caught.status}: {caught.statusText}
-        </h1>
-        {message}
+        <div className="flex flex-col md:flex-row items-center h-full">
+          <div>
+            <h1 className="text-6xl font-black mt-24 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-600">
+              <Link to={`/${caught.status}`}>{caught.status}</Link>{' '}
+              {caught.statusText}
+            </h1>
+            <h2 className="text-xl flex items-center space-x-2 mt-3">
+              {message}
+            </h2>
+          </div>
+          <img
+            src="/images/error.png"
+            alt="Error Broken Page"
+            className="md:ml-auto max-h-[60vh] drop-shadow"
+          />
+        </div>
       </Layout>
     </Document>
   )
