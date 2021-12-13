@@ -1,0 +1,214 @@
+{
+  "100": {
+    "reason": "Continue",
+    "brief": ""
+  },
+  "101": {
+    "reason": "Switching Protocols",
+    "brief": ""
+  },
+  "103": {
+    "reason": "Early Hints",
+    "brief": ""
+  },
+  "200": {
+    "reason": "OK",
+    "brief": ""
+  },
+  "201": {
+    "reason": "Created",
+    "brief": ""
+  },
+  "202": {
+    "reason": "Accepted",
+    "brief": ""
+  },
+  "203": {
+    "reason": "Non-Authoritative Information",
+    "brief": ""
+  },
+  "204": {
+    "reason": "No Content",
+    "brief": ""
+  },
+  "205": {
+    "reason": "Reset Content",
+    "brief": ""
+  },
+  "206": {
+    "reason": "Partial Content",
+    "brief": ""
+  },
+  "300": {
+    "reason": "Multiple Choices",
+    "brief": ""
+  },
+  "301": {
+    "reason": "Moved Permanently",
+    "brief": ""
+  },
+  "302": {
+    "reason": "Found",
+    "brief": ""
+  },
+  "303": {
+    "reason": "See Other",
+    "brief": ""
+  },
+  "304": {
+    "reason": "Not Modified",
+    "brief": ""
+  },
+  "305": {
+    "reason": "Use Proxy",
+    "brief": ""
+  },
+  "307": {
+    "reason": "Temporary Redirect",
+    "brief": ""
+  },
+  "308": {
+    "reason": "Permanent Redirect",
+    "brief": ""
+  },
+  "400": {
+    "reason": "Bad Request",
+    "brief": ""
+  },
+  "401": {
+    "reason": "Unauthorized",
+    "brief": ""
+  },
+  "402": {
+    "reason": "Payment Required",
+    "brief": ""
+  },
+  "403": {
+    "reason": "Forbidden",
+    "brief": ""
+  },
+  "404": {
+    "reason": "Not Found",
+    "brief": ""
+  },
+  "405": {
+    "reason": "Method Not Allowed",
+    "brief": ""
+  },
+  "406": {
+    "reason": "Not Acceptable",
+    "brief": ""
+  },
+  "407": {
+    "reason": "Proxy Authentication Required",
+    "brief": ""
+  },
+  "408": {
+    "reason": "Request Timeout",
+    "brief": ""
+  },
+  "409": {
+    "reason": "Conflict",
+    "brief": ""
+  },
+  "410": {
+    "reason": "Gone",
+    "brief": ""
+  },
+  "411": {
+    "reason": "Length Required",
+    "brief": ""
+  },
+  "412": {
+    "reason": "Precondition Failed",
+    "brief": ""
+  },
+  "413": {
+    "reason": "Payload Too Large",
+    "brief": ""
+  },
+  "414": {
+    "reason": "URI Too Long",
+    "brief": ""
+  },
+  "415": {
+    "reason": "Unsupported Media Type",
+    "brief": ""
+  },
+  "416": {
+    "reason": "Range Not Satisfiable",
+    "brief": ""
+  },
+  "417": {
+    "reason": "Expectation Failed",
+    "brief": ""
+  },
+  "418": {
+    "reason": "I'm a teapot",
+    "brief": ""
+  },
+  "422": {
+    "reason": "Unprocessable Entity",
+    "brief": ""
+  },
+  "425": {
+    "reason": "Too Early",
+    "brief": ""
+  },
+  "426": {
+    "reason": "Upgrade Required",
+    "brief": ""
+  },
+  "428": {
+    "reason": "Precondition Required",
+    "brief": ""
+  },
+  "429": {
+    "reason": "Too Many Requests",
+    "brief": ""
+  },
+  "500": {
+    "reason": "Internal Server Error",
+    "brief": ""
+  },
+  "501": {
+    "reason": "Not Implemented",
+    "brief": ""
+  },
+  "502": {
+    "reason": "Bad Gateway",
+    "brief": ""
+  },
+  "503": {
+    "reason": "Service Unavailable",
+    "brief": ""
+  },
+  "504": {
+    "reason": "Gateway Timeout",
+    "brief": ""
+  },
+  "505": {
+    "reason": "HTTP Version Not Supported",
+    "brief": ""
+  },
+  "506": {
+    "reason": "Variant Also Negotiates",
+    "brief": ""
+  },
+  "507": {
+    "reason": "Insufficient Storage",
+    "brief": ""
+  },
+  "508": {
+    "reason": "Loop Detected",
+    "brief": ""
+  },
+  "510": {
+    "reason": "Not Extended",
+    "brief": ""
+  },
+  "511": {
+    "reason": "Network Authentication Required",
+    "brief": ""
+  }
+}
