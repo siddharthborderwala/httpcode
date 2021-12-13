@@ -8,7 +8,7 @@ const db = database as DBType
 export let meta: MetaFunction = () => {
   return {
     title: 'Http Codes',
-    description: 'Http status codes for humans, in english.',
+    description: 'Http status codes for humans 😄',
   }
 }
 
