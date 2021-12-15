@@ -1,27 +1,28 @@
 {
   "100": {
     "reason": "Continue",
-    "brief": ""
+    "brief": "The initial part of the request has been received and everything is OK. The server intends to send the final response when the whole request is received. The client may ignore this response if the request has already finished.",
+    "useCase": "The client intends to send a payload, but it sends the related headers first with a header `Expect: '100-Continue'`, if the server accepts the request, the client will send the payload."
   },
   "101": {
     "reason": "Switching Protocols",
-    "brief": ""
-  },
-  "103": {
-    "reason": "Early Hints",
-    "brief": ""
+    "brief": "The server understands the request and it is ready to accept and serve it, but it wants the client to change protocols, assuming doing so is advantageous. Some reasons maybe security, performance and protocol-limitations.",
+    "useCase": "The client sends an HTTP request and the server agrees to comply with the request, but it sends back a response with status 101 and an `Upgrade: 'HTTPS'`. The client will now send the request using the HTTPS protocol instead. Here, the payload of the request remains the same."
   },
   "200": {
     "reason": "OK",
-    "brief": ""
+    "brief": "The client's request was successfully received, understood, accepted and served by the server. The response ought to contain a payload with a size more than zero.",
+    "useCase": "A client requests for a webpage like https://www.google.com/ and the server replies with a response containing the said resource."
   },
   "201": {
     "reason": "Created",
-    "brief": ""
+    "brief": "The server understands the request and it creates one or more resources as specified in the request's body. The response contains the header `Location: '<url>'` specifying the url of the created resource(s).",
+    "useCase": "A client wants to create a new object in the database, and it sends the payload in the request body. The server accepts the request and accordingly creates the resources and replies with a 204 status along with the URL of the created resource in the headers and the resource itself in the response body."
   },
   "202": {
     "reason": "Accepted",
-    "brief": ""
+    "brief": "The server has accepted the request for processing, but the process hasn't been completed yet. Eventually, the request may or may not be acted upon, as it may be disallowed during the processing. There is no mechanism to send back a response after the processing has been completed.",
+    "useCase": "A client wants to send an email using an API like sendgrid. The client sends the request with the payload, the server accepts it and sends a 202 response. The server may send this as it may be batching similar processes or processing the said payload in an asynchronous manner and does not want/need to maintain a persistent connection with the client."
   },
   "203": {
     "reason": "Non-Authoritative Information",
