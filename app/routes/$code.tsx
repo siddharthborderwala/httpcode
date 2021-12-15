@@ -24,22 +24,25 @@ export let meta: MetaFunction = ({ params }) => {
 }
 
 export default function Index() {
-  const { code, reason, brief } = useLoaderData()
+  const { code, reason, brief, useCase } = useLoaderData<
+    DBType & { code: string }
+  >()
+
+  const gradient = getGradientFromCode(code)
 
   return (
-    <>
+    <article>
       <div
-        className={`rounded-lg bg-gradient-to-br ${getGradientFromCode(
-          code
-        )} mt-4 pl-8 pt-32 pb-6 shadow-inner flex flex-col`}
+        className={`rounded-lg bg-gradient-to-br ${gradient} mt-4 pl-8 pt-32 pb-6 shadow-inner`}
       >
         <h1 className="text-7xl font-black text-white drop-shadow">{code}</h1>
-        <h2 className="uppercase text-lg tracking-wide font-bold text-gray-100">
-          {reason}
-        </h2>
       </div>
-
-      <p>{brief}</p>
-    </>
+      <h2 className="uppercase text-2xl tracking-wide font-bold mt-8 text-indigo-500">
+        {reason}
+      </h2>
+      <p className="text-lg mt-6">{brief}</p>
+      <h3 className="text-xl font-bold mt-6">Use Case</h3>
+      <p className="text-lg mt-2">{useCase}</p>
+    </article>
   )
 }
