@@ -26,23 +26,28 @@
   },
   "203": {
     "reason": "Non-Authoritative Information",
-    "brief": ""
+    "brief": "The request is successfully served, but the payload has been modified by a transformation proxy for advantageous reasons in a form, different from, what would be a normal '200 OK' response's payload.",
+    "useCase": "A client requests for an image resource and let's say under normal circumstances the image sent would be in the png but the transforming proxy converts it into a webp file and the server sends it over with a 203 response."
   },
   "204": {
     "reason": "No Content",
-    "brief": ""
+    "brief": "The server has accepted the request and processed it successfully, but there is no payload it has to send over to the client. So, it sends a 204 HTTP response back with an empty body and some related headers.",
+    "useCase": "You are editing a document in a web application and the browser sends a request to the server to save a particular paragraph. The server accepts and processes the request and sends back a 204 response with no payload."
   },
   "205": {
     "reason": "Reset Content",
-    "brief": ""
+    "brief": "The request has been accepted and processed and now the server wants the client to reset the part of the user interface that made the request, for example a form. The server sends no payload back to the client.",
+    "useCase": "The client has sent a request containing a one-time-password for user authentication. The server has accepted the request, authenticated the user and now wants the client to reload the page, enabling the user to view the protected route."
   },
   "206": {
     "reason": "Partial Content",
-    "brief": ""
+    "brief": "The request has been accepted and the response body contains the range(s) of data specified by the request in its `Range` header. The server may send back a single range or a set of ranges depending on the request.",
+    "useCase": "A user is viewing a video on the browser, as videos are quite large in size, the server won't send all of it in one go. The client will ask for a range of bytes, and the server will respond with the said bytes."
   },
   "300": {
     "reason": "Multiple Choices",
-    "brief": ""
+    "brief": "The server has accepted the request, but the said resource has more than one representations. The server sends back each of the alternatives, so that the client can decide which one it wants and make the request for it.",
+    "useCase": "A client has asked for particular webpage in English language and the server responds with a 300 response including the list of specific locales for English like 'en-US', 'en-UK', etc. for the client to decide which on it wants."
   },
   "301": {
     "reason": "Moved Permanently",
