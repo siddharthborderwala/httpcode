@@ -17,7 +17,7 @@
   "201": {
     "reason": "Created",
     "brief": "The server understands the request and it creates one or more resources as specified in the request's body. The response contains the header `Location: '<url>'` specifying the url of the created resource(s).",
-    "useCase": "A client wants to create a new object in the database, and it sends the payload in the request body. The server accepts the request and accordingly creates the resources and replies with a 204 status along with the URL of the created resource in the headers and the resource itself in the response body."
+    "useCase": "A client wants to create a new object in the database, and it sends the payload in the request body. The server accepts the request and accordingly creates the resources and replies with a 201 status along with the URL of the created resource in the headers and the resource itself in the response body."
   },
   "202": {
     "reason": "Accepted",
@@ -51,11 +51,13 @@
   },
   "301": {
     "reason": "Moved Permanently",
-    "brief": ""
+    "brief": "The server understands the request, but the asked resource has been moved to a new permanent URI, and all future references to the resource should be done with the new URI, which must be sent back in the `Location:<new-uri>` by the server.",
+    "useCase": "A client asks for a particular resource, but the server just went through an upgrade causing changes to the resource URIs. The server will now send back the new permanent URI for the said resources back with a 301 status code."
   },
   "302": {
     "reason": "Found",
-    "brief": ""
+    "brief": "The request is valid and accepted, but the asked resource has been given a new temporary URI, which is sent back in the `Location:<new-uri> header. The client should get the resource from the updated URI for now, but it must keep using the original URI in future as the change is only temporary.`",
+    "useCase": "A client asks for a particular resource, but the server is going through a routine maintenance. The server will now send back a temporary URI for the said resources back with a 302 status code."
   },
   "303": {
     "reason": "See Other",
