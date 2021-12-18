@@ -61,23 +61,23 @@
   },
   "303": {
     "reason": "See Other",
-    "brief": ""
+    "brief": "The server understands the request but it is redirecting the client to a different URI, specified in the response header `Location:<uri>`. It indicates that the server intends to show a different resource form what the client may normally expect.",
+    "useCase": "A client makes a form submission on a particular page, and it may be expecting a particular type of a response but it may instead be redirected to a confirmation page with the status code of 303 and the url of the page in the `Location` header."
   },
   "304": {
     "reason": "Not Modified",
-    "brief": ""
-  },
-  "305": {
-    "reason": "Use Proxy",
-    "brief": ""
+    "brief": "The client has asked for a resource that the server deems to be not required to re-transmitted as it has not changed since the last time the client had asked for it. This happens only in GET, HEAD and OPTIONS requests.",
+    "useCase": "A browser has asked for a webpage like google.com and it got the response. 10 seconds later, the page was reloaded by the user and the response is a 304 code, meaning the browser can use the previously sent response as the resource hasn't been changed since."
   },
   "307": {
     "reason": "Temporary Redirect",
-    "brief": ""
+    "brief": "The server accepts the request, meaning it is valid but the resource is temporarily shifted to another URI specified in the `Location:<uri>` header. The method and body of the original request must be used to perform the redirected request.",
+    "useCase": "A client may have made a POST request to upload some data to the server, but the resource is temporarily shifted, hence the client makes the same request to the URI specified in the `Location` header from the 307 response."
   },
   "308": {
     "reason": "Permanent Redirect",
-    "brief": ""
+    "brief": "The server accepts the request, meaning it is valid but the resource is permanently shifted to another URI specified in the `Location:<uri>` header. The method and body of the original request must be used to perform the redirected request.",
+    "useCase": "A client is requesting a particular webpage, let's say github.com/jobs, but the server underwent and upgrade and now the requested page is github.com/careers, so the client will have to make the same request at the github.com/careers endpoint."
   },
   "400": {
     "reason": "Bad Request",
