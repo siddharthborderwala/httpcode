@@ -81,11 +81,13 @@
   },
   "400": {
     "reason": "Bad Request",
-    "brief": ""
+    "brief": "The server could not understand the request sent by the client because of malformed syntax, like a json encoding error or lack of some required fields. The client must not send the request again without modification.",
+    "useCase": "A client submitted a signup form having an email and a password field. Let's say the email was invalid, so the server sends back a 400 http response, optinally specifying what the error was."
   },
   "401": {
     "reason": "Unauthorized",
-    "brief": ""
+    "brief": "The server rejected the request due to lack of valid credentials on the request. The client should send a valid authorization header with the request to be able to perform sensitive operations or get sensitive data.",
+    "useCase": "A malicious user is trying to fetch information about another user from a server, but the server rejects the requests because the request does not have the authorization credentials which are provided by the server to make such requests."
   },
   "402": {
     "reason": "Payment Required",
