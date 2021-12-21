@@ -43,13 +43,13 @@ export default function Index() {
       <p className="text-lg mt-6">{brief}</p>
       <h3 className="text-xl font-bold mt-6">Use Case</h3>
       <p className="text-lg mt-2">{useCase}</p>
-      <div className="rounded-md bg-gray-300 text-gray-700 p-8">
+      <div className="rounded-md bg-gray-200 text-gray-700 p-8 mt-12">
         <h4 className="text-xl font-bold">Found a problem with this page?</h4>
         <a
           href="http://github.com/siddharthborderwala/httpcode"
           target="_blank"
           rel="noopener noreferrer"
-          className="outline-none focus:ring text-lg text-indigo-500 cursor-pointer mt-6"
+          className="outline-none focus:ring text-lg text-indigo-500 cursor-pointer mt-6 block"
         >
           Edit this page on GitHub.
         </a>
@@ -57,7 +57,7 @@ export default function Index() {
           href="http://github.com/siddharthborderwala/httpcode/issues"
           target="_blank"
           rel="noopener noreferrer"
-          className="outline-none focus:ring text-lg text-indigo-500 cursor-pointer mt-4"
+          className="outline-none focus:ring text-lg text-indigo-500 cursor-pointer mt-4 block"
         >
           Report a problem with this page.
         </a>
