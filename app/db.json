@@ -89,21 +89,20 @@
     "brief": "The server rejected the request due to lack of valid credentials on the request. The client should send a valid authorization header with the request to be able to perform sensitive operations or get sensitive data.",
     "useCase": "A malicious user is trying to fetch information about another user from a server, but the server rejects the requests because the request does not have the authorization credentials which are provided by the server to make such requests."
   },
-  "402": {
-    "reason": "Payment Required",
-    "brief": ""
-  },
   "403": {
     "reason": "Forbidden",
-    "brief": ""
+    "brief": "The server understood the request but refuses to accept and serve it. The server may or may not choose to send back a reason for the rejection of the request. The client should not make the same request again.",
+    "useCase": "A client requests for a photo from a server but the photo has been banned for some reasons, so the server responds with a 403 Forbidden error. If the server wants to hide that this resource ever existed, it may return a 404 Not Found too."
   },
   "404": {
     "reason": "Not Found",
-    "brief": ""
+    "brief": "The server was not able to find the resource the client is trying to access. Either the resource did not exist or the server is not willing to disclose it. This may be a temporary or permanent condition.",
+    "useCase": "A user is trying to access a blog article, let's say at example.com/article-123 but the article was removed, so the server will respond with a 404 Not Found response, which may or may not contain a payload."
   },
   "405": {
     "reason": "Method Not Allowed",
-    "brief": ""
+    "brief": "The server understands the request, but it does not allow the request's HTTP Method (GET, POST, etc...) for that resource. It responds with a list of the allowed methods for that resource in the response header `Allow:<methods>`.",
+    "useCase": "A client is trying to fetch google.com using a POST request which is normally used to send some data to the server to create resources, so the server responds with a 405 code specifying the header `Allow:GET`, meaning the client should use GET method for the request."
   },
   "406": {
     "reason": "Not Acceptable",
