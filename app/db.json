@@ -106,15 +106,18 @@
   },
   "406": {
     "reason": "Not Acceptable",
-    "brief": ""
+    "brief": "The server understands the request but the content encoding for the particular resource differs from what the client accepts, as specified in the `Accept` header in the request, and hence due to this difference, the server responds with a 406 status code.",
+    "useCase": "A client tries to make a get request for some content, specifying that it accepts g compressed data, but the server can only respond with brotli compressed data. Hence, the server responds with a 406 response."
   },
   "407": {
     "reason": "Proxy Authentication Required",
-    "brief": ""
+    "brief": "This code is similar to 401, and here the server expects the client requests to be authenticated by a proxy, i.e. the requests must have a valid `Proxy-Authenticate` header to be served. Failed requests can try again after authentication from the proxy.",
+    "useCase": "A malicious user is trying to fetch information about another user from a server, but the server rejects the requests because the request does not have the authorization credentials which are provided by the proxy to make such requests."
   },
   "408": {
     "reason": "Request Timeout",
-    "brief": ""
+    "brief": "The client did not furnish a request within a specified duration of time that the server was prepared to wait, so the server responds with a request timeout error, 408 code. The client may repeat the request without modification later.",
+    "useCase": "A user is browsing a webpage and hovers over a link, the webpage makes a connection with the server before the user clicks the link for faster load times, but the user stays idle for 2 seconds. Here the server sends a 408, as a request was not furnished within the time limit."
   },
   "409": {
     "reason": "Conflict",
