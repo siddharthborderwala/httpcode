@@ -121,15 +121,18 @@
   },
   "409": {
     "reason": "Conflict",
-    "brief": ""
+    "brief": "The server deems the request to be invalid as it is in conflict with the current stats of the target resource. The user may be able to resolve the conflict and make the request again. The server sends back information about the source of conflict. These typically occur in PUT requests.",
+    "useCase": "A user is trying to update a shared resource, but the changes they made are in conflict with some changes made by another user's request. So, the server responds with a 409 code, indicating the request cannot be served with some information about the source of the conflict."
   },
   "410": {
     "reason": "Gone",
-    "brief": ""
+    "brief": "The server understands the request but fails to serve it as the asked resource is no longer available and it is likely to stay unavailable permanently. If the server is not sure if the unavailability condition is permanent, a 404 code ought to be returned.",
+    "useCase": "Amazon was hosting a flat 30% sale on all its products on the page amazon.com/flat-30 for a limited time period. Now, a user tries to access it beyond the said period and the server sends a 410 code, indicating that the particular page is permanently removed."
   },
   "411": {
     "reason": "Length Required",
-    "brief": ""
+    "brief": "The request sent is deemed invalid by the server as it expects the request to contain a valid `Content-Length` header. The client should repeat the request with a valid header containing the length of the body in the request.",
+    "useCase": "A user wants to register on a particular website and browser tries to send the related data to the server without specifying the `Content-Length` header. The server returns a 411 code, indicating that it mandates the browser to send the header for the request to be served."
   },
   "412": {
     "reason": "Precondition Failed",
