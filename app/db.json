@@ -136,15 +136,18 @@
   },
   "412": {
     "reason": "Precondition Failed",
-    "brief": ""
+    "brief": "This error typically happens when a resource needs to be updated based on a condition specified in the headers such as `If-Unmodified-Since:<time>`. The server checks the condition and if it is not met, the request is rejected and a 412 response is sent back.",
+    "useCase": "A user is trying to update some data on a server if the data has been untouched from, let's say yesterday. If the server finds the condition to hold, it will perform the update operation and return a 200/204 status, else it will respond with a 412."
   },
   "413": {
     "reason": "Payload Too Large",
-    "brief": ""
+    "brief": "The server deems the request to be invalid because the payload of the request is larger than the limits defined by the server. Hence, it returns a 413 response and closes the connection. The client may repeat the request in the future.",
+    "useCase": "A user is trying to upload a photo to a server. Let's say the server has a limit of 5MB but the picture the user is trying to upload is 6MB, so the server rejects the upload request with a 413 code. The client may retry the request in the future, but the server doesn't guarantee accepting it."
   },
   "414": {
     "reason": "URI Too Long",
-    "brief": ""
+    "brief": "The client makes a request at a certain URI, but the lengh of the URI is longer than the server is willing to interpret. This would result in the server rejecting the request with a 414 code, indicating the URI is too long.",
+    "useCase": "A malicious user is trying to exploit some security holes in a server. He tries to send in a request with an extremely large length, which may cause the server to take a very long time to interpret, possibly disrupting services to other users. But if the server has limits for the URL length, it will reject the request with a 414 code."
   },
   "415": {
     "reason": "Unsupported Media Type",
